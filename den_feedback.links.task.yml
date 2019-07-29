@@ -1,0 +1,21 @@
+# Custom feedback routing definition
+custom_feedback.settings_tab:
+  route_name: custom_feedback.settings
+  title: 'Settings'
+  base_route: custom_feedback.settings
+
+entity.custom_feedback.canonical:
+  route_name: entity.custom_feedback.canonical
+  base_route: entity.custom_feedback.canonical
+  title: 'View'
+
+entity.custom_feedback.edit_form:
+  route_name: entity.custom_feedback.edit_form
+  base_route: entity.custom_feedback.canonical
+  title: 'Edit'
+
+entity.custom_feedback.delete_form:
+  route_name:  entity.custom_feedback.delete_form
+  base_route:  entity.custom_feedback.canonical
+  title: Delete
+  weight: 10

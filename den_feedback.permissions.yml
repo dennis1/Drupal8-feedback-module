@@ -1,0 +1,19 @@
+add custom feedback entities:
+  title: 'Create new Custom feedback entities'
+
+administer custom feedback entities:
+  title: 'Administer Custom feedback entities'
+  description: 'Allow to access the administration form to configure Custom feedback entities.'
+  restrict access: true
+
+delete custom feedback entities:
+  title: 'Delete Custom feedback entities'
+
+edit custom feedback entities:
+  title: 'Edit Custom feedback entities'
+
+view published custom feedback entities:
+  title: 'View published Custom feedback entities'
+
+view unpublished custom feedback entities:
+  title: 'View unpublished Custom feedback entities'

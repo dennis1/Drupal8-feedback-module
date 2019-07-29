@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains den_feedback.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function den_feedback_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the den_feedback module.
+    case 'help.page.den_feedback':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This Drupal module collects feedbacks and store the data') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function den_feedback_theme() {
+  $theme = [];
+  $theme['den_feedback'] = [
+    'render element' => 'children',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function den_feedback_form_den_feedback_feedback_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $user = \Drupal::currentUser();
+  if ($user->id()) {
+    $user_email = $user->getEmail();
+    // User is logged in.
+    $form['email']['#default_value'] = $user_email;
+  }
+}

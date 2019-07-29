@@ -1,0 +1,15 @@
+
+den_feedback.feedbackform:
+  path: '/feedback'
+  defaults:
+    _form: '\Drupal\den_feedback\Form\FeedbackForm'
+    _title: 'The Feedback Form'
+  requirements:
+    _permission: 'access content'
+den_feedback.feedback_controller_viewResults:
+  path: '/results'
+  defaults:
+    _controller: '\Drupal\den_feedback\Controller\FeedbackController::viewResults'
+    _title: 'The Feedback Results Page'
+  requirements:
+    _permission: 'access content'

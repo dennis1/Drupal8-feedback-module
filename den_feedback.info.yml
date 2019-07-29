@@ -1,0 +1,6 @@
+name: 'den_feedback'
+type: module
+description: 'This Drupal module collects feedbacks and store the data'
+core: 8.x
+package: 'den_drupal_modules'
+dependencies:

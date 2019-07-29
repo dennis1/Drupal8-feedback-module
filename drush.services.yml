@@ -1,0 +1,5 @@
+services:
+  den_feedback.commands:
+    class: \Drupal\den_feedback\Commands\DenFeedbackCommands
+    tags:
+      - { name: drush.command }

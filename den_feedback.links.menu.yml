@@ -1,0 +1,14 @@
+
+# Custom feedback menu items definition
+entity.custom_feedback.collection:
+  title: 'Custom feedback list'
+  route_name: entity.custom_feedback.collection
+  description: 'List Custom feedback entities'
+  parent: system.admin_structure
+  weight: 100
+
+custom_feedback.admin.structure.settings:
+  title: 'Custom feedback settings'
+  description: 'Configure Custom feedback entities'
+  route_name: custom_feedback.settings
+  parent: system.admin_structure
